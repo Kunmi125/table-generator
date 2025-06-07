@@ -4,12 +4,8 @@ from tkinter.ttk import *
 def generateTable():
     tables = ""
     for i in range(endVal.get() + 1):
-        tables = str(the_num.get()) + "x" + str(i) + "=" + str(the_num.get() * i) + "\n"
+        tables += str(the_num.get()) + "x" + str(i) + "=" + str(the_num.get() * i) + "\n"
     table_display.configure(text = tables)
-
-
-
-
 
 
 window = Tk()
@@ -32,6 +28,9 @@ r1 = Radiobutton(window, variable = endVal, text = "10", value = 10)
 r2 = Radiobutton(window, variable = endVal, text = "20", value = 20)
 r3 = Radiobutton(window, variable = endVal, text = "30", value = 30)
 numbers.grid(row = 1, column = 1)
+
+endVal.set(30)
+
 
 r1.grid(row = 1, column = 2)
 r2.grid(row = 2, column = 2)
